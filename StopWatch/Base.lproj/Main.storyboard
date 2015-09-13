@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="StopWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KRV-rm-5DD"/>
+                        <viewControllerLayoutGuide type="bottom" id="o9M-vF-7kA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EQm-vI-7nx">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <color key="barTintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <items>
+                                    <navigationItem title="StopWatch" id="Hen-Mh-2Ie"/>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hou-Ob-zKR">
+                                <rect key="frame" x="0.0" y="72" width="320" height="82"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="82" id="xRH-4y-QSR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="72"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DAn-SW-PFz">
+                                <rect key="frame" x="110" y="174" width="100" height="30"/>
+                                <state key="normal" title="START"/>
+                                <connections>
+                                    <action selector="startStop:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Xoq-XS-Xao"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="VEl-Ka-Nql">
+                                <rect key="frame" x="0.0" y="257" width="320" height="311"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="sectionIndexBackgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="x0Z-o7-gSe"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="EYE-cD-Zox"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lOJ-kd-Nry">
+                                <rect key="frame" x="110" y="216" width="100" height="30"/>
+                                <state key="normal" title="RESET"/>
+                                <connections>
+                                    <action selector="lapReset:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="s9N-Br-AFa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Hou-Ob-zKR" firstAttribute="top" secondItem="EQm-vI-7nx" secondAttribute="bottom" id="2hc-FZ-vXf"/>
+                            <constraint firstItem="Hou-Ob-zKR" firstAttribute="leading" secondItem="VEl-Ka-Nql" secondAttribute="leading" id="3K8-4Y-xc8"/>
+                            <constraint firstItem="VEl-Ka-Nql" firstAttribute="centerX" secondItem="Hou-Ob-zKR" secondAttribute="centerX" id="5zh-u6-X6Z"/>
+                            <constraint firstItem="Hou-Ob-zKR" firstAttribute="top" secondItem="EQm-vI-7nx" secondAttribute="bottom" id="AxT-Tz-dku"/>
+                            <constraint firstItem="lOJ-kd-Nry" firstAttribute="trailing" secondItem="DAn-SW-PFz" secondAttribute="trailing" id="Gqx-Yg-d8a"/>
+                            <constraint firstItem="EQm-vI-7nx" firstAttribute="centerX" secondItem="VEl-Ka-Nql" secondAttribute="centerX" id="HSD-h9-6Lo"/>
+                            <constraint firstItem="EQm-vI-7nx" firstAttribute="top" secondItem="KRV-rm-5DD" secondAttribute="bottom" constant="8" id="M9K-d8-wa7"/>
+                            <constraint firstItem="lOJ-kd-Nry" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="94" id="QgF-in-7BC"/>
+                            <constraint firstItem="lOJ-kd-Nry" firstAttribute="top" secondItem="DAn-SW-PFz" secondAttribute="bottom" constant="12" id="Rgm-Sq-ptB"/>
+                            <constraint firstItem="DAn-SW-PFz" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="25" id="Tzt-Qu-ece"/>
+                            <constraint firstAttribute="bottom" secondItem="VEl-Ka-Nql" secondAttribute="bottom" id="WDS-Ug-86K"/>
+                            <constraint firstItem="VEl-Ka-Nql" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="civ-L2-AgU"/>
+                            <constraint firstItem="lOJ-kd-Nry" firstAttribute="centerX" secondItem="Hou-Ob-zKR" secondAttribute="centerX" id="d6A-AN-6kC"/>
+                            <constraint firstAttribute="centerX" secondItem="VEl-Ka-Nql" secondAttribute="centerX" id="eP7-hh-Afm"/>
+                            <constraint firstAttribute="trailing" secondItem="VEl-Ka-Nql" secondAttribute="trailing" id="efp-ie-UxE"/>
+                            <constraint firstItem="EQm-vI-7nx" firstAttribute="leading" secondItem="Hou-Ob-zKR" secondAttribute="leading" id="l1b-Da-7KO"/>
+                            <constraint firstItem="lOJ-kd-Nry" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="216" id="sQ6-e8-N1p"/>
+                            <constraint firstItem="VEl-Ka-Nql" firstAttribute="top" secondItem="lOJ-kd-Nry" secondAttribute="bottom" constant="11" id="ukU-Hx-C2Q"/>
+                            <constraint firstItem="EQm-vI-7nx" firstAttribute="centerX" secondItem="VEl-Ka-Nql" secondAttribute="centerX" id="vNm-eq-BWj"/>
+                            <constraint firstItem="lOJ-kd-Nry" firstAttribute="leading" secondItem="DAn-SW-PFz" secondAttribute="leading" id="z3h-5k-rbD"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Tzt-Qu-ece"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="lapsTableView" destination="VEl-Ka-Nql" id="zHp-0U-c12"/>
+                        <outlet property="recordButton" destination="lOJ-kd-Nry" id="Xi1-Ba-KKx"/>
+                        <outlet property="standbyButton" destination="DAn-SW-PFz" id="rgE-fe-ub1"/>
+                        <outlet property="stopwatchLabel" destination="Hou-Ob-zKR" id="5DG-db-6dt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="460" y="374"/>
+        </scene>
+    </scenes>
+</document>
