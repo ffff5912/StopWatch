@@ -12,6 +12,7 @@
 		0D86676E1BA5A9F900C2C13A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 0D86676D1BA5A9F900C2C13A /* .gitignore */; };
 		0D86676F1BA5A9F900C2C13A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 0D86676D1BA5A9F900C2C13A /* .gitignore */; };
 		0D8667711BA5AEC700C2C13A /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 0D8667701BA5AEC700C2C13A /* README.md */; };
+		0D9E32911BA6F372006A432D /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9E32901BA6F372006A432D /* Timer.swift */; };
 		0DA4DCA71BA458B4009F2118 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA4DCA61BA458B4009F2118 /* AppDelegate.swift */; };
 		0DA4DCA91BA458B4009F2118 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA4DCA81BA458B4009F2118 /* ViewController.swift */; };
 		0DA4DCAC1BA458B4009F2118 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DA4DCAA1BA458B4009F2118 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 		0D86676A1BA57AA200C2C13A /* StopWatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopWatch.swift; sourceTree = "<group>"; };
 		0D86676D1BA5A9F900C2C13A /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		0D8667701BA5AEC700C2C13A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0D9E32901BA6F372006A432D /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		0DA4DCA11BA458B4009F2118 /* StopWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StopWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DA4DCA51BA458B4009F2118 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DA4DCA61BA458B4009F2118 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 		0DA4DCA31BA458B4009F2118 /* StopWatch */ = {
 			isa = PBXGroup;
 			children = (
+				0D9E32901BA6F372006A432D /* Timer.swift */,
 				0D8667691BA57A2300C2C13A /* Service */,
 				0DA4DCA61BA458B4009F2118 /* AppDelegate.swift */,
 				0DA4DCA81BA458B4009F2118 /* ViewController.swift */,
@@ -238,6 +241,7 @@
 				0DA4DCA91BA458B4009F2118 /* ViewController.swift in Sources */,
 				0D8667681BA5690D00C2C13A /* ValueStore.swift in Sources */,
 				0D8667711BA5AEC700C2C13A /* README.md in Sources */,
+				0D9E32911BA6F372006A432D /* Timer.swift in Sources */,
 				0D86676B1BA57AA200C2C13A /* StopWatch.swift in Sources */,
 				0DA4DCA71BA458B4009F2118 /* AppDelegate.swift in Sources */,
 			);
