@@ -11,17 +11,33 @@ import UIKit
 class Timer: NSObject {
     var timer = NSTimer()
     var currentTime = ""
-    var minutes: Int = 0
-    var seconds: Int = 0
-    var fractions: Int = 0
+    var minutes = 0
+    var seconds = 0
+    var fractions = 0
     var stopwatchLabel: UILabel
+    let updateTime = {(inout incVal: Int, inout initVal: Int) -> () in
+        incVal += 1
+        initVal = 0
+    }
+    let formatText = {(current: Int) -> String in
+        if current > 9 {
+            return "\(current)"
+        }
+        return "0\(current)"
+    }
     
     init(label: UILabel) {
         stopwatchLabel = label
     }
     
     func start() {
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: Selector("updateStopwatch:"), userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(
+            0.01,
+            target: self,
+            selector: Selector("updateStopwatch:"),
+            userInfo: nil,
+            repeats: true
+        )
     }
     
     func stop() {
@@ -33,26 +49,28 @@ class Timer: NSObject {
         seconds = 0
         minutes = 0
         currentTime = "00:00.00"
-        stopwatchLabel.text = "00:00.00"
+        stopwatchLabel.text = currentTime
     }
     
+    func getWatchText(minutes: Int, seconds: Int, fractions: Int, formatter: (value: Int) -> String) -> String {
+        var text = ""
+        text += formatter(value: minutes) + ":"
+        text += formatter(value: seconds) + "."
+        text += formatter(value: fractions)
+        return text
+    }
+
     func updateStopwatch(timer: NSTimer) {
         fractions += 1
         if fractions == 100 {
-            seconds += 1
-            fractions = 0
+            updateTime(&seconds, &fractions)
         }
         
         if seconds == 60 {
-            minutes += 1
-            seconds = 0
+            updateTime(&minutes, &seconds)
         }
         
-        let fractionsString = fractions > 9 ? "\(fractions)" : "0\(fractions)"
-        let secondsString = seconds > 9 ? "\(seconds)" : "0\(seconds)"
-        let minutesString = minutes > 9 ? "\(minutes)" : "0\(minutes)"
-        
-        currentTime = "\(minutesString):\(secondsString).\(fractionsString)"
+        currentTime = self.getWatchText(minutes, seconds: seconds, fractions: fractions, formatter: formatText)
         stopwatchLabel.text = currentTime
     }
 }
