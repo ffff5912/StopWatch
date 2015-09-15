@@ -29,7 +29,7 @@ class Timer: NSObject {
     init(label: UILabel) {
         stopwatchLabel = label
     }
-    
+
     func start() {
         timer = NSTimer.scheduledTimerWithTimeInterval(
             0.01,
@@ -38,6 +38,7 @@ class Timer: NSObject {
             userInfo: nil,
             repeats: true
         )
+        NSRunLoop.mainRunLoop().addTimer(timer, forMode: NSRunLoopCommonModes)
     }
     
     func stop() {
