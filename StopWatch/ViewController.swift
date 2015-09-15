@@ -26,8 +26,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     @IBAction func lapReset(sender: AnyObject) {
         if stopWatch!.addLap == true {
-            laps.insert(stopWatch!.time, atIndex: 0)
-            lapsTableView.reloadData()
+            dispatch_async(dispatch_get_main_queue(), {
+                self.laps.insert(self.stopWatch!.time, atIndex: 0)
+                self.lapsTableView.reloadData()
+            })
         } else {
             stopWatch!.addLap = false
             laps.removeAll(keepCapacity: false)
