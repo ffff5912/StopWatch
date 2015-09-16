@@ -19,6 +19,7 @@
 		0DA4DCAE1BA458B4009F2118 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DA4DCAD1BA458B4009F2118 /* Images.xcassets */; };
 		0DA4DCB11BA458B4009F2118 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DA4DCAF1BA458B4009F2118 /* LaunchScreen.xib */; };
 		0DA4DCBD1BA458B4009F2118 /* StopWatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA4DCBC1BA458B4009F2118 /* StopWatchTests.swift */; };
+		0DAD082E1BA9A2F800847156 /* SubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAD082D1BA9A2F800847156 /* SubViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		0DA4DCB61BA458B4009F2118 /* StopWatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StopWatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DA4DCBB1BA458B4009F2118 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DA4DCBC1BA458B4009F2118 /* StopWatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchTests.swift; sourceTree = "<group>"; };
+		0DAD082D1BA9A2F800847156 /* SubViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				0DA4DCA61BA458B4009F2118 /* AppDelegate.swift */,
 				0DA4DCA81BA458B4009F2118 /* ViewController.swift */,
 				0DA4DCAA1BA458B4009F2118 /* Main.storyboard */,
+				0DAD082D1BA9A2F800847156 /* SubViewController.swift */,
 				0DA4DCAD1BA458B4009F2118 /* Images.xcassets */,
 				0DA4DCAF1BA458B4009F2118 /* LaunchScreen.xib */,
 				0DA4DCA41BA458B4009F2118 /* Supporting Files */,
@@ -240,6 +243,7 @@
 			files = (
 				0DA4DCA91BA458B4009F2118 /* ViewController.swift in Sources */,
 				0D8667681BA5690D00C2C13A /* ValueStore.swift in Sources */,
+				0DAD082E1BA9A2F800847156 /* SubViewController.swift in Sources */,
 				0D8667711BA5AEC700C2C13A /* README.md in Sources */,
 				0D9E32911BA6F372006A432D /* Timer.swift in Sources */,
 				0D86676B1BA57AA200C2C13A /* StopWatch.swift in Sources */,

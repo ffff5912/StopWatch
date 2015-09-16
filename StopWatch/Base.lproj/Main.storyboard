@@ -94,11 +94,78 @@
                         <outlet property="recordButton" destination="lOJ-kd-Nry" id="Xi1-Ba-KKx"/>
                         <outlet property="standbyButton" destination="DAn-SW-PFz" id="rgE-fe-ub1"/>
                         <outlet property="stopwatchLabel" destination="Hou-Ob-zKR" id="5DG-db-6dt"/>
+                        <segue destination="XAk-vV-VUG" kind="presentation" identifier="showSubView" id="nhi-WS-r1h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="460" y="374"/>
+        </scene>
+        <!--Sub View Controller-->
+        <scene sceneID="sEb-5H-wau">
+            <objects>
+                <viewController id="XAk-vV-VUG" customClass="SubViewController" customModule="StopWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1zq-Hp-5wf"/>
+                        <viewControllerLayoutGuide type="bottom" id="RJW-uM-DyO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="G6H-7Q-OH7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Lap" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBf-PG-1wQ">
+                                <rect key="frame" x="75" y="95" width="158" height="54"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kax-GX-syY">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <color key="barTintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <items>
+                                    <navigationItem title="StopWatch" id="top-1c-DGj"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZPf-Zj-gig">
+                                <rect key="frame" x="137" y="491" width="35" height="30"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButton:" destination="XAk-vV-VUG" eventType="touchUpInside" id="7Kg-Ly-Scf"/>
+                                    <segue destination="6ES-B5-Kyg" kind="unwind" unwindAction="unwind:" id="gRi-yf-aVr"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="00:00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDl-ft-4D5">
+                                <rect key="frame" x="28" y="157" width="264" height="78"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xBf-PG-1wQ" firstAttribute="top" secondItem="kax-GX-syY" secondAttribute="bottom" constant="23" id="17D-NZ-CKm"/>
+                            <constraint firstAttribute="trailing" secondItem="sDl-ft-4D5" secondAttribute="trailing" constant="28" id="3Gb-Ud-U7s"/>
+                            <constraint firstItem="sDl-ft-4D5" firstAttribute="centerX" secondItem="kax-GX-syY" secondAttribute="centerX" id="AYA-qk-Jvd"/>
+                            <constraint firstAttribute="centerX" secondItem="sDl-ft-4D5" secondAttribute="centerX" id="BhR-qk-bZO"/>
+                            <constraint firstItem="ZPf-Zj-gig" firstAttribute="top" secondItem="sDl-ft-4D5" secondAttribute="bottom" constant="256" id="SBe-xA-0oc"/>
+                            <constraint firstItem="sDl-ft-4D5" firstAttribute="leading" secondItem="G6H-7Q-OH7" secondAttribute="leading" constant="28" id="TwH-Wd-ZLR"/>
+                            <constraint firstItem="sDl-ft-4D5" firstAttribute="centerX" secondItem="xBf-PG-1wQ" secondAttribute="centerX" constant="6" id="cub-Kk-deT"/>
+                            <constraint firstItem="sDl-ft-4D5" firstAttribute="top" secondItem="xBf-PG-1wQ" secondAttribute="bottom" constant="8" id="dkm-uk-LB7"/>
+                            <constraint firstItem="ZPf-Zj-gig" firstAttribute="centerX" secondItem="sDl-ft-4D5" secondAttribute="centerX" constant="-5.5" id="pCE-hR-m9y"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="lapText" destination="sDl-ft-4D5" id="8GS-Lz-27c"/>
+                        <outlet property="subTitle" destination="xBf-PG-1wQ" id="KBS-jw-kUY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VEA-xY-fSN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="6ES-B5-Kyg" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="900" y="374"/>
         </scene>
     </scenes>
 </document>
