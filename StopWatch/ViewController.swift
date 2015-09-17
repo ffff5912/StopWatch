@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var laps: [String] = []
@@ -29,6 +30,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBAction func lapReset(sender: AnyObject) {
         if stopWatch!.addLap == true {
             dispatch_async(dispatch_get_main_queue(), {
+                let realm = Realm()
+                let record = Record(value: ["time": self.stopWatch!.time])
+                realm.write {
+                    realm.add(record)
+                }
                 self.laps.insert(self.stopWatch!.time, atIndex: 0)
                 self.lapsTableView.reloadData()
             })
@@ -41,6 +47,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     @IBAction func unwind(sender: UIStoryboardSegue) {
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         stopWatch = StopWatch(label: stopwatchLabel)
