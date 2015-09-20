@@ -10,6 +10,7 @@ import UIKit
 import RealmSwift
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    let recordRepository: RecordRepository = RecordRepository()
     var laps: [String] = []
     var stopWatch: StopWatch?
     var selectedText: String? //subViewに渡す文字列
@@ -29,12 +30,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     @IBAction func lapReset(sender: AnyObject) {
         if stopWatch!.addLap == true {
+            let record = Record(value: ["time": self.stopWatch!.time])
             dispatch_async(dispatch_get_main_queue(), {
-                let realm = Realm()
-                let record = Record(value: ["time": self.stopWatch!.time])
-                realm.write {
-                    realm.add(record)
-                }
+                self.recordRepository.save(record)
                 self.laps.insert(self.stopWatch!.time, atIndex: 0)
                 self.lapsTableView.reloadData()
             })
@@ -67,7 +65,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // Table View Methods
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "Cell")
+        let cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "Cell")
         cell.backgroundColor = self.view.backgroundColor
         cell.textLabel?.text = "Lap \(laps.count - indexPath.row)"
         cell.detailTextLabel?.text = "\(laps[indexPath.row])"
