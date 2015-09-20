@@ -23,7 +23,9 @@
 		0DA4DCBD1BA458B4009F2118 /* StopWatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA4DCBC1BA458B4009F2118 /* StopWatchTests.swift */; };
 		0DAD082E1BA9A2F800847156 /* SubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAD082D1BA9A2F800847156 /* SubViewController.swift */; };
 		0DECCB1D1BAEB57600C7A937 /* UIColor+rgbHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DECCB1C1BAEB57600C7A937 /* UIColor+rgbHex.swift */; settings = {ASSET_TAGS = (); }; };
-		FD4CD4D4EE61E9BF0F975007 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EA30D5B32E104C4BA99B3D8 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		0DECCB1F1BAEF21000C7A937 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 0DECCB1E1BAEF21000C7A937 /* Podfile */; settings = {ASSET_TAGS = (); }; };
+		0DECCB221BAEF50500C7A937 /* RecordRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DECCB211BAEF50500C7A937 /* RecordRepository.swift */; settings = {ASSET_TAGS = (); }; };
+		D3A630604DAE714B48CA22F8 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAEAAF41C81B9E2D450D0A26 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +39,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0755E0CF8A15DE55368C9A4B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		0D8667671BA5690D00C2C13A /* ValueStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueStore.swift; sourceTree = "<group>"; };
 		0D86676A1BA57AA200C2C13A /* StopWatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopWatch.swift; sourceTree = "<group>"; };
 		0D86676D1BA5A9F900C2C13A /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -57,8 +58,11 @@
 		0DA4DCBC1BA458B4009F2118 /* StopWatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchTests.swift; sourceTree = "<group>"; };
 		0DAD082D1BA9A2F800847156 /* SubViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubViewController.swift; sourceTree = "<group>"; };
 		0DECCB1C1BAEB57600C7A937 /* UIColor+rgbHex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+rgbHex.swift"; sourceTree = "<group>"; };
-		1EA30D5B32E104C4BA99B3D8 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E8E84284F5F354BC397E0B47 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		0DECCB1E1BAEF21000C7A937 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		0DECCB211BAEF50500C7A937 /* RecordRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordRepository.swift; sourceTree = "<group>"; };
+		4EEC42C910B5EC147F67A33E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		9B7880E5C8F3339121F4391F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		EAEAAF41C81B9E2D450D0A26 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD4CD4D4EE61E9BF0F975007 /* Pods.framework in Frameworks */,
+				D3A630604DAE714B48CA22F8 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,13 +105,14 @@
 		0DA4DC981BA458B4009F2118 = {
 			isa = PBXGroup;
 			children = (
+				0DECCB1E1BAEF21000C7A937 /* Podfile */,
 				0D8667701BA5AEC700C2C13A /* README.md */,
 				0D86676D1BA5A9F900C2C13A /* .gitignore */,
 				0DA4DCA31BA458B4009F2118 /* StopWatch */,
 				0DA4DCB91BA458B4009F2118 /* StopWatchTests */,
 				0DA4DCA21BA458B4009F2118 /* Products */,
-				C9CE9EEBB07150E1FB264B41 /* Pods */,
 				75D2D703AF9772BA8F0A9C5B /* Frameworks */,
+				28F02473A313FF4C1966947A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +128,7 @@
 		0DA4DCA31BA458B4009F2118 /* StopWatch */ = {
 			isa = PBXGroup;
 			children = (
+				0DECCB201BAEF4E600C7A937 /* Repository */,
 				0DECCB1B1BAEB51B00C7A937 /* Utils */,
 				0D8A30FE1BAAFCC0005F7E6C /* Model */,
 				0D9E32901BA6F372006A432D /* Timer.swift */,
@@ -171,21 +177,29 @@
 			name = Utils;
 			sourceTree = "<group>";
 		};
+		0DECCB201BAEF4E600C7A937 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				0DECCB211BAEF50500C7A937 /* RecordRepository.swift */,
+			);
+			name = Repository;
+			sourceTree = "<group>";
+		};
+		28F02473A313FF4C1966947A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9B7880E5C8F3339121F4391F /* Pods.debug.xcconfig */,
+				4EEC42C910B5EC147F67A33E /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		75D2D703AF9772BA8F0A9C5B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1EA30D5B32E104C4BA99B3D8 /* Pods.framework */,
+				EAEAAF41C81B9E2D450D0A26 /* Pods.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C9CE9EEBB07150E1FB264B41 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E8E84284F5F354BC397E0B47 /* Pods.debug.xcconfig */,
-				0755E0CF8A15DE55368C9A4B /* Pods.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,12 +209,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0DA4DCC01BA458B4009F2118 /* Build configuration list for PBXNativeTarget "StopWatch" */;
 			buildPhases = (
-				667833AB3BD332882535F431 /* Check Pods Manifest.lock */,
+				97B75F832E20508FF494AF17 /* Check Pods Manifest.lock */,
 				0DA4DC9D1BA458B4009F2118 /* Sources */,
 				0DA4DC9E1BA458B4009F2118 /* Frameworks */,
 				0DA4DC9F1BA458B4009F2118 /* Resources */,
-				0444446925795BBBDFB1C929 /* Embed Pods Frameworks */,
-				27CD5851641A829884FF7FF3 /* Copy Pods Resources */,
+				AEFC3BF66AC9DF840E723B47 /* Embed Pods Frameworks */,
+				06C1AAE2F00A7EAE2800B628 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -237,7 +251,7 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = ffff5912;
 				TargetAttributes = {
 					0DA4DCA01BA458B4009F2118 = {
@@ -273,6 +287,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DECCB1F1BAEF21000C7A937 /* Podfile in Resources */,
 				0D86676E1BA5A9F900C2C13A /* .gitignore in Resources */,
 				0DA4DCAC1BA458B4009F2118 /* Main.storyboard in Resources */,
 				0DA4DCB11BA458B4009F2118 /* LaunchScreen.xib in Resources */,
@@ -291,22 +306,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0444446925795BBBDFB1C929 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		27CD5851641A829884FF7FF3 /* Copy Pods Resources */ = {
+		06C1AAE2F00A7EAE2800B628 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -321,7 +321,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		667833AB3BD332882535F431 /* Check Pods Manifest.lock */ = {
+		97B75F832E20508FF494AF17 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -336,6 +336,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		AEFC3BF66AC9DF840E723B47 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -344,6 +359,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DA4DCA91BA458B4009F2118 /* ViewController.swift in Sources */,
+				0DECCB221BAEF50500C7A937 /* RecordRepository.swift in Sources */,
 				0DECCB1D1BAEB57600C7A937 /* UIColor+rgbHex.swift in Sources */,
 				0D8667681BA5690D00C2C13A /* ValueStore.swift in Sources */,
 				0DAD082E1BA9A2F800847156 /* SubViewController.swift in Sources */,
@@ -415,6 +431,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -477,22 +494,24 @@
 		};
 		0DA4DCC11BA458B4009F2118 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E8E84284F5F354BC397E0B47 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 9B7880E5C8F3339121F4391F /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = StopWatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "StopWatch.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		0DA4DCC21BA458B4009F2118 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0755E0CF8A15DE55368C9A4B /* Pods.release.xcconfig */;
+			baseConfigurationReference = 4EEC42C910B5EC147F67A33E /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = StopWatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "StopWatch.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -511,6 +530,7 @@
 				);
 				INFOPLIST_FILE = StopWatchTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "StopWatch.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StopWatch.app/StopWatch";
 			};
@@ -526,6 +546,7 @@
 				);
 				INFOPLIST_FILE = StopWatchTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "StopWatch.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StopWatch.app/StopWatch";
 			};
