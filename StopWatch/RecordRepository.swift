@@ -10,7 +10,7 @@ import UIKit
 import RealmSwift
 
 class RecordRepository {
-    let realm: Realm
+    var realm: Realm
     
     init() {
         realm = try! Realm()
