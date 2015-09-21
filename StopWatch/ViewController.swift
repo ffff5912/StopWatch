@@ -10,8 +10,6 @@ import UIKit
 import RealmSwift
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    let recordRepository: RecordRepository = RecordRepository()
-    var laps: [String] = []
     var stopWatch: StopWatch?
     var selectedText: String? //subViewに渡す文字列
     var subTitleText: String?
@@ -30,17 +28,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     @IBAction func lapReset(sender: AnyObject) {
         if stopWatch!.addLap == true {
-            let record = Record(value: ["time": self.stopWatch!.time])
             dispatch_async(dispatch_get_main_queue(), {
-                self.recordRepository.save(record)
-                self.laps.insert(self.stopWatch!.time, atIndex: 0)
+                self.stopWatch!.update()
                 self.lapsTableView.reloadData()
             })
         } else {
-            stopWatch!.addLap = false
-            laps.removeAll(keepCapacity: false)
+            stopWatch!.reset()
             lapsTableView.reloadData()
-            stopWatch?.reset()
         }
     }
     @IBAction func unwind(sender: UIStoryboardSegue) {
@@ -67,20 +61,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.Value1, reuseIdentifier: "Cell")
         cell.backgroundColor = self.view.backgroundColor
-        cell.textLabel?.text = "Lap \(laps.count - indexPath.row)"
-        cell.detailTextLabel?.text = "\(laps[indexPath.row])"
+        cell.textLabel?.text = "Lap \(stopWatch!.records.count - indexPath.row)"
+        cell.detailTextLabel?.text = "\(stopWatch!.records[indexPath.row].time)"
         
         return cell
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return laps.count        
+        return stopWatch!.records.count
     }
     
     func tableView(table: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         //subViewControllerに渡す文字列をセット
-        selectedText = laps[indexPath.row]
-        subTitleText = "LAP \(laps.count - indexPath.row)"
+        selectedText = stopWatch!.records[indexPath.row].time
+        subTitleText = "LAP \(stopWatch!.records.count - indexPath.row)"
         
         //subViewControllerへ遷移するSegueを呼び出す
         performSegueWithIdentifier("showSubView", sender: AnyObject?())

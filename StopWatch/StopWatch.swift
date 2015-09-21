@@ -15,10 +15,10 @@ class StopWatch: NSObject {
     var standby: Bool = true
     var addLap: Bool = false
     var time: String {
-        get {
-            return timer.currentTime
-        }
+        return timer.currentTime
     }
+    var records = Stack<Record>()
+    let recordRepository = RecordRepository()
     
     init(label: UILabel) {
         stopwatchLabel = label
@@ -41,6 +41,15 @@ class StopWatch: NSObject {
     }
     
     func reset() {
+        self.addLap = false
+        self.records.removeAll()
         timer.reset()
     }
+    
+    func update() {
+        let record = Record(value: ["time": self.time])
+        self.recordRepository.save(record)
+        self.records.add(record)
+    }
+    
 }
