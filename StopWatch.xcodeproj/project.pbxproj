@@ -21,8 +21,8 @@
 		0DA4DCAE1BA458B4009F2118 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DA4DCAD1BA458B4009F2118 /* Images.xcassets */; };
 		0DA4DCB11BA458B4009F2118 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DA4DCAF1BA458B4009F2118 /* LaunchScreen.xib */; };
 		0DA4DCBD1BA458B4009F2118 /* StopWatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA4DCBC1BA458B4009F2118 /* StopWatchTests.swift */; };
-		0DAB79971BB052F00066632F /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAB79961BB052F00066632F /* Stack.swift */; settings = {ASSET_TAGS = (); }; };
-		0DAB79991BB0579A0066632F /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAB79981BB0579A0066632F /* Collection.swift */; settings = {ASSET_TAGS = (); }; };
+		0DAB79971BB052F00066632F /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAB79961BB052F00066632F /* Collection.swift */; settings = {ASSET_TAGS = (); }; };
+		0DAB79991BB0579A0066632F /* CollectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAB79981BB0579A0066632F /* CollectionProtocol.swift */; settings = {ASSET_TAGS = (); }; };
 		0DAD082E1BA9A2F800847156 /* SubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAD082D1BA9A2F800847156 /* SubViewController.swift */; };
 		0DECCB1D1BAEB57600C7A937 /* UIColor+rgbHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DECCB1C1BAEB57600C7A937 /* UIColor+rgbHex.swift */; settings = {ASSET_TAGS = (); }; };
 		0DECCB1F1BAEF21000C7A937 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 0DECCB1E1BAEF21000C7A937 /* Podfile */; settings = {ASSET_TAGS = (); }; };
@@ -58,8 +58,8 @@
 		0DA4DCB61BA458B4009F2118 /* StopWatchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StopWatchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DA4DCBB1BA458B4009F2118 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DA4DCBC1BA458B4009F2118 /* StopWatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchTests.swift; sourceTree = "<group>"; };
-		0DAB79961BB052F00066632F /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
-		0DAB79981BB0579A0066632F /* Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
+		0DAB79961BB052F00066632F /* Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
+		0DAB79981BB0579A0066632F /* CollectionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionProtocol.swift; sourceTree = "<group>"; };
 		0DAD082D1BA9A2F800847156 /* SubViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubViewController.swift; sourceTree = "<group>"; };
 		0DECCB1C1BAEB57600C7A937 /* UIColor+rgbHex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+rgbHex.swift"; sourceTree = "<group>"; };
 		0DECCB1E1BAEF21000C7A937 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
@@ -88,37 +88,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0D8667691BA57A2300C2C13A /* Service */ = {
+		0D8667691BA57A2300C2C13A /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				0D8667671BA5690D00C2C13A /* ValueStore.swift */,
+				0DAB79961BB052F00066632F /* Collection.swift */,
+				0DAB79981BB0579A0066632F /* CollectionProtocol.swift */,
 				0D86676A1BA57AA200C2C13A /* StopWatch.swift */,
-				0D8A31011BAB0053005F7E6C /* Date.swift */,
+				0D9E32901BA6F372006A432D /* Timer.swift */,
+				0D8667671BA5690D00C2C13A /* ValueStore.swift */,
 			);
-			name = Service;
+			path = Services;
 			sourceTree = "<group>";
 		};
-		0D8A30FE1BAAFCC0005F7E6C /* Model */ = {
+		0D8A30FE1BAAFCC0005F7E6C /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				0DAB79961BB052F00066632F /* Stack.swift */,
 				0D8A30FF1BAAFD18005F7E6C /* Record.swift */,
-				0DAB79981BB0579A0066632F /* Collection.swift */,
 			);
-			name = Model;
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		0D974FF71BB130B00029A6C2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0DAD082D1BA9A2F800847156 /* SubViewController.swift */,
+				0DA4DCA81BA458B4009F2118 /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		0DA4DC981BA458B4009F2118 = {
 			isa = PBXGroup;
 			children = (
-				0DECCB1E1BAEF21000C7A937 /* Podfile */,
-				0D8667701BA5AEC700C2C13A /* README.md */,
-				0D86676D1BA5A9F900C2C13A /* .gitignore */,
-				0DA4DCA31BA458B4009F2118 /* StopWatch */,
-				0DA4DCB91BA458B4009F2118 /* StopWatchTests */,
-				0DA4DCA21BA458B4009F2118 /* Products */,
 				75D2D703AF9772BA8F0A9C5B /* Frameworks */,
 				28F02473A313FF4C1966947A /* Pods */,
+				0DA4DCA21BA458B4009F2118 /* Products */,
+				0DA4DCA31BA458B4009F2118 /* StopWatch */,
+				0DA4DCB91BA458B4009F2118 /* StopWatchTests */,
+				0D86676D1BA5A9F900C2C13A /* .gitignore */,
+				0DECCB1E1BAEF21000C7A937 /* Podfile */,
+				0D8667701BA5AEC700C2C13A /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,18 +143,16 @@
 		0DA4DCA31BA458B4009F2118 /* StopWatch */ = {
 			isa = PBXGroup;
 			children = (
-				0DECCB201BAEF4E600C7A937 /* Repository */,
+				0D974FF71BB130B00029A6C2 /* Controllers */,
+				0D8A30FE1BAAFCC0005F7E6C /* Entities */,
+				0DECCB201BAEF4E600C7A937 /* Repositories */,
+				0D8667691BA57A2300C2C13A /* Services */,
+				0DA4DCA41BA458B4009F2118 /* Supporting Files */,
 				0DECCB1B1BAEB51B00C7A937 /* Utils */,
-				0D8A30FE1BAAFCC0005F7E6C /* Model */,
-				0D9E32901BA6F372006A432D /* Timer.swift */,
-				0D8667691BA57A2300C2C13A /* Service */,
 				0DA4DCA61BA458B4009F2118 /* AppDelegate.swift */,
-				0DA4DCA81BA458B4009F2118 /* ViewController.swift */,
-				0DA4DCAA1BA458B4009F2118 /* Main.storyboard */,
-				0DAD082D1BA9A2F800847156 /* SubViewController.swift */,
 				0DA4DCAD1BA458B4009F2118 /* Images.xcassets */,
 				0DA4DCAF1BA458B4009F2118 /* LaunchScreen.xib */,
-				0DA4DCA41BA458B4009F2118 /* Supporting Files */,
+				0DA4DCAA1BA458B4009F2118 /* Main.storyboard */,
 			);
 			path = StopWatch;
 			sourceTree = "<group>";
@@ -155,14 +162,14 @@
 			children = (
 				0DA4DCA51BA458B4009F2118 /* Info.plist */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		0DA4DCB91BA458B4009F2118 /* StopWatchTests */ = {
 			isa = PBXGroup;
 			children = (
-				0DA4DCBC1BA458B4009F2118 /* StopWatchTests.swift */,
 				0DA4DCBA1BA458B4009F2118 /* Supporting Files */,
+				0DA4DCBC1BA458B4009F2118 /* StopWatchTests.swift */,
 			);
 			path = StopWatchTests;
 			sourceTree = "<group>";
@@ -172,23 +179,24 @@
 			children = (
 				0DA4DCBB1BA458B4009F2118 /* Info.plist */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		0DECCB1B1BAEB51B00C7A937 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				0D8A31011BAB0053005F7E6C /* Date.swift */,
 				0DECCB1C1BAEB57600C7A937 /* UIColor+rgbHex.swift */,
 			);
-			name = Utils;
+			path = Utils;
 			sourceTree = "<group>";
 		};
-		0DECCB201BAEF4E600C7A937 /* Repository */ = {
+		0DECCB201BAEF4E600C7A937 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
 				0DECCB211BAEF50500C7A937 /* RecordRepository.swift */,
 			);
-			name = Repository;
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 		28F02473A313FF4C1966947A /* Pods */ = {
@@ -368,9 +376,9 @@
 				0DECCB221BAEF50500C7A937 /* RecordRepository.swift in Sources */,
 				0DECCB1D1BAEB57600C7A937 /* UIColor+rgbHex.swift in Sources */,
 				0D8667681BA5690D00C2C13A /* ValueStore.swift in Sources */,
-				0DAB79971BB052F00066632F /* Stack.swift in Sources */,
+				0DAB79971BB052F00066632F /* Collection.swift in Sources */,
 				0DAD082E1BA9A2F800847156 /* SubViewController.swift in Sources */,
-				0DAB79991BB0579A0066632F /* Collection.swift in Sources */,
+				0DAB79991BB0579A0066632F /* CollectionProtocol.swift in Sources */,
 				0D8667711BA5AEC700C2C13A /* README.md in Sources */,
 				0D9E32911BA6F372006A432D /* Timer.swift in Sources */,
 				0D86676B1BA57AA200C2C13A /* StopWatch.swift in Sources */,
@@ -405,6 +413,7 @@
 				0DA4DCAB1BA458B4009F2118 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		0DA4DCAF1BA458B4009F2118 /* LaunchScreen.xib */ = {
@@ -413,6 +422,7 @@
 				0DA4DCB01BA458B4009F2118 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -505,7 +515,7 @@
 			baseConfigurationReference = 9B7880E5C8F3339121F4391F /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = StopWatch/Info.plist;
+				INFOPLIST_FILE = "StopWatch/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "StopWatch.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -517,7 +527,7 @@
 			baseConfigurationReference = 4EEC42C910B5EC147F67A33E /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = StopWatch/Info.plist;
+				INFOPLIST_FILE = "StopWatch/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "StopWatch.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -536,7 +546,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = StopWatchTests/Info.plist;
+				INFOPLIST_FILE = "StopWatchTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "StopWatch.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -552,7 +562,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = StopWatchTests/Info.plist;
+				INFOPLIST_FILE = "StopWatchTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "StopWatch.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol Collection {
+protocol CollectionProtocol {
     typealias ItemType
     mutating func add(item: ItemType, index: Int)
     mutating func push(item: ItemType)

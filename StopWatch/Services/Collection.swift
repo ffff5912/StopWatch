@@ -9,7 +9,7 @@
 
 import UIKit
 
-struct Stack<T>:Collection {
+struct Collection<T>:CollectionProtocol {
     typealias ItemType = T
     var items = [T]()
     var count: Int {

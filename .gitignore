@@ -20,3 +20,5 @@ DerivedData
 !.gitkeep
 .DS_Store
 Pods/
+*.xcworkspace
+*.plist

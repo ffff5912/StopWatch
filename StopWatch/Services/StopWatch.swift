@@ -17,7 +17,7 @@ class StopWatch: NSObject {
     var time: String {
         return timer.currentTime
     }
-    var records = Stack<Record>()
+    var records = Collection<Record>()
     let recordRepository = RecordRepository()
     
     init(label: UILabel) {
