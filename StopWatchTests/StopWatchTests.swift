@@ -10,10 +10,13 @@ import UIKit
 import XCTest
 
 class StopWatchTests: XCTestCase {
+    var stopWatch: StopWatch!
+    var standbyButton = UIButton()
+    var recordButton = UIButton()
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        stopWatch = StopWatch(label: UILabel())
     }
     
     override func tearDown() {
@@ -24,6 +27,15 @@ class StopWatchTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         XCTAssert(true, "Pass")
+    }
+    
+    func testActivation() {
+        stopWatch.active(standbyButton, recordButton: recordButton)
+        XCTAssertTrue(stopWatch.time != "00:00.00", "タイマーが作動しているか")
+        XCTAssertTrue(standbyButton.currentTitle == "STOP", "タイマー動作中のタイトル")
+        XCTAssertTrue(recordButton.currentTitle == "LAP", "タイマー動作中のタイトル")
+        XCTAssertFalse(stopWatch.standby, "タイマー操作管理フラグ")
+        XCTAssertTrue(stopWatch.addLap, "TableViewへの操作管理フラグ")
     }
     
     func testPerformanceExample() {

@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		0D62F8E31BB4316A00E507F6 /* LabelText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D62F8E21BB4316A00E507F6 /* LabelText.swift */; settings = {ASSET_TAGS = (); }; };
+		0D62F8E41BB43D9300E507F6 /* LabelText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D62F8E21BB4316A00E507F6 /* LabelText.swift */; settings = {ASSET_TAGS = (); }; };
+		0D62F8E81BB4491900E507F6 /* StopWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D86676A1BA57AA200C2C13A /* StopWatch.swift */; settings = {ASSET_TAGS = (); }; };
+		0D62F8EA1BB44AA000E507F6 /* StopWatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA4DCBC1BA458B4009F2118 /* StopWatchTests.swift */; settings = {ASSET_TAGS = (); }; };
+		0D62F8EB1BB44AAA00E507F6 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAB79961BB052F00066632F /* Collection.swift */; settings = {ASSET_TAGS = (); }; };
+		0D62F8EC1BB44AAE00E507F6 /* CollectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAB79981BB0579A0066632F /* CollectionProtocol.swift */; settings = {ASSET_TAGS = (); }; };
+		0D62F8ED1BB44AB100E507F6 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9E32901BA6F372006A432D /* Timer.swift */; settings = {ASSET_TAGS = (); }; };
+		0D62F8EE1BB44ABB00E507F6 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8A30FF1BAAFD18005F7E6C /* Record.swift */; settings = {ASSET_TAGS = (); }; };
+		0D62F8EF1BB44ABF00E507F6 /* RecordRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DECCB211BAEF50500C7A937 /* RecordRepository.swift */; settings = {ASSET_TAGS = (); }; };
+		0D62F8F01BB44AD200E507F6 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8A31011BAB0053005F7E6C /* Date.swift */; settings = {ASSET_TAGS = (); }; };
+		0D62F8F11BB44AD600E507F6 /* UIColor+rgbHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DECCB1C1BAEB57600C7A937 /* UIColor+rgbHex.swift */; settings = {ASSET_TAGS = (); }; };
 		0D86676B1BA57AA200C2C13A /* StopWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D86676A1BA57AA200C2C13A /* StopWatch.swift */; };
 		0D86676E1BA5A9F900C2C13A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 0D86676D1BA5A9F900C2C13A /* .gitignore */; };
 		0D86676F1BA5A9F900C2C13A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 0D86676D1BA5A9F900C2C13A /* .gitignore */; };
@@ -20,7 +30,6 @@
 		0DA4DCAC1BA458B4009F2118 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DA4DCAA1BA458B4009F2118 /* Main.storyboard */; };
 		0DA4DCAE1BA458B4009F2118 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DA4DCAD1BA458B4009F2118 /* Images.xcassets */; };
 		0DA4DCB11BA458B4009F2118 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DA4DCAF1BA458B4009F2118 /* LaunchScreen.xib */; };
-		0DA4DCBD1BA458B4009F2118 /* StopWatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA4DCBC1BA458B4009F2118 /* StopWatchTests.swift */; };
 		0DAB79971BB052F00066632F /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAB79961BB052F00066632F /* Collection.swift */; settings = {ASSET_TAGS = (); }; };
 		0DAB79991BB0579A0066632F /* CollectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAB79981BB0579A0066632F /* CollectionProtocol.swift */; settings = {ASSET_TAGS = (); }; };
 		0DAD082E1BA9A2F800847156 /* SubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAD082D1BA9A2F800847156 /* SubViewController.swift */; };
@@ -392,7 +401,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DA4DCBD1BA458B4009F2118 /* StopWatchTests.swift in Sources */,
+				0D62F8EF1BB44ABF00E507F6 /* RecordRepository.swift in Sources */,
+				0D62F8F11BB44AD600E507F6 /* UIColor+rgbHex.swift in Sources */,
+				0D62F8E81BB4491900E507F6 /* StopWatch.swift in Sources */,
+				0D62F8EC1BB44AAE00E507F6 /* CollectionProtocol.swift in Sources */,
+				0D62F8EA1BB44AA000E507F6 /* StopWatchTests.swift in Sources */,
+				0D62F8ED1BB44AB100E507F6 /* Timer.swift in Sources */,
+				0D62F8EE1BB44ABB00E507F6 /* Record.swift in Sources */,
+				0D62F8E41BB43D9300E507F6 /* LabelText.swift in Sources */,
+				0D62F8F01BB44AD200E507F6 /* Date.swift in Sources */,
+				0D62F8EB1BB44AAA00E507F6 /* Collection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
