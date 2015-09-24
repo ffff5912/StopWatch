@@ -9,7 +9,6 @@
 import UIKit
 
 class StopWatch: NSObject {
-    let valueStore = ValueStore()
     var timer: Timer
     var stopwatchLabel: UILabel
     var standby: Bool = true
@@ -28,14 +27,16 @@ class StopWatch: NSObject {
     
     func active(standbyButton: UIButton, recordButton: UIButton) {
         timer.start()
-        valueStore.setTitle(standbyButton, record: recordButton, status: "active")
+        standbyButton.setTitle(LabelText.active.getStandbyTitle(), forState: .Normal)
+        recordButton.setTitle(LabelText.active.getRecordTitle(), forState: .Normal)
         standby = false
         addLap = true
     }
     
     func passive(standbyButton: UIButton, recordButton: UIButton) {
         timer.stop()
-        valueStore.setTitle(standbyButton, record: recordButton, status: "passive")
+        standbyButton.setTitle(LabelText.passive.getStandbyTitle(), forState: .Normal)
+        recordButton.setTitle(LabelText.passive.getRecordTitle(), forState: .Normal)
         standby = true
         addLap = false
     }

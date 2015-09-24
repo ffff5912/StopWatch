@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D8667681BA5690D00C2C13A /* ValueStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8667671BA5690D00C2C13A /* ValueStore.swift */; };
+		0D62F8E31BB4316A00E507F6 /* LabelText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D62F8E21BB4316A00E507F6 /* LabelText.swift */; settings = {ASSET_TAGS = (); }; };
 		0D86676B1BA57AA200C2C13A /* StopWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D86676A1BA57AA200C2C13A /* StopWatch.swift */; };
 		0D86676E1BA5A9F900C2C13A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 0D86676D1BA5A9F900C2C13A /* .gitignore */; };
 		0D86676F1BA5A9F900C2C13A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 0D86676D1BA5A9F900C2C13A /* .gitignore */; };
@@ -41,7 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0D8667671BA5690D00C2C13A /* ValueStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueStore.swift; sourceTree = "<group>"; };
+		0D62F8E21BB4316A00E507F6 /* LabelText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelText.swift; sourceTree = "<group>"; };
 		0D86676A1BA57AA200C2C13A /* StopWatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StopWatch.swift; sourceTree = "<group>"; };
 		0D86676D1BA5A9F900C2C13A /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		0D8667701BA5AEC700C2C13A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -95,7 +95,7 @@
 				0DAB79981BB0579A0066632F /* CollectionProtocol.swift */,
 				0D86676A1BA57AA200C2C13A /* StopWatch.swift */,
 				0D9E32901BA6F372006A432D /* Timer.swift */,
-				0D8667671BA5690D00C2C13A /* ValueStore.swift */,
+				0D62F8E21BB4316A00E507F6 /* LabelText.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -375,7 +375,6 @@
 				0DA4DCA91BA458B4009F2118 /* ViewController.swift in Sources */,
 				0DECCB221BAEF50500C7A937 /* RecordRepository.swift in Sources */,
 				0DECCB1D1BAEB57600C7A937 /* UIColor+rgbHex.swift in Sources */,
-				0D8667681BA5690D00C2C13A /* ValueStore.swift in Sources */,
 				0DAB79971BB052F00066632F /* Collection.swift in Sources */,
 				0DAD082E1BA9A2F800847156 /* SubViewController.swift in Sources */,
 				0DAB79991BB0579A0066632F /* CollectionProtocol.swift in Sources */,
@@ -383,6 +382,7 @@
 				0D9E32911BA6F372006A432D /* Timer.swift in Sources */,
 				0D86676B1BA57AA200C2C13A /* StopWatch.swift in Sources */,
 				0D8A31001BAAFD18005F7E6C /* Record.swift in Sources */,
+				0D62F8E31BB4316A00E507F6 /* LabelText.swift in Sources */,
 				0D8A31021BAB0053005F7E6C /* Date.swift in Sources */,
 				0DA4DCA71BA458B4009F2118 /* AppDelegate.swift in Sources */,
 			);
