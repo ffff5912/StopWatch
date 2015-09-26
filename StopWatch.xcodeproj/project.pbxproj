@@ -33,8 +33,7 @@
 		0DAB79971BB052F00066632F /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAB79961BB052F00066632F /* Collection.swift */; settings = {ASSET_TAGS = (); }; };
 		0DAB79991BB0579A0066632F /* CollectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAB79981BB0579A0066632F /* CollectionProtocol.swift */; settings = {ASSET_TAGS = (); }; };
 		0DAD082E1BA9A2F800847156 /* SubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAD082D1BA9A2F800847156 /* SubViewController.swift */; };
-		0DCE5FDE1BB634130084D3C0 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 0DCE5FDD1BB634120084D3C0 /* Makefile */; settings = {ASSET_TAGS = (); }; };
-		0DCE5FE01BB634D80084D3C0 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 0DCE5FDF1BB634D80084D3C0 /* .travis.yml */; settings = {ASSET_TAGS = (); }; };
+		0DCE5FE21BB69F0D0084D3C0 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 0DCE5FE11BB69F0D0084D3C0 /* .travis.yml */; settings = {ASSET_TAGS = (); }; };
 		0DECCB1D1BAEB57600C7A937 /* UIColor+rgbHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DECCB1C1BAEB57600C7A937 /* UIColor+rgbHex.swift */; settings = {ASSET_TAGS = (); }; };
 		0DECCB1F1BAEF21000C7A937 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 0DECCB1E1BAEF21000C7A937 /* Podfile */; settings = {ASSET_TAGS = (); }; };
 		0DECCB221BAEF50500C7A937 /* RecordRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DECCB211BAEF50500C7A937 /* RecordRepository.swift */; settings = {ASSET_TAGS = (); }; };
@@ -72,8 +71,7 @@
 		0DAB79961BB052F00066632F /* Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		0DAB79981BB0579A0066632F /* CollectionProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionProtocol.swift; sourceTree = "<group>"; };
 		0DAD082D1BA9A2F800847156 /* SubViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubViewController.swift; sourceTree = "<group>"; };
-		0DCE5FDD1BB634120084D3C0 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
-		0DCE5FDF1BB634D80084D3C0 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
+		0DCE5FE11BB69F0D0084D3C0 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		0DECCB1C1BAEB57600C7A937 /* UIColor+rgbHex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+rgbHex.swift"; sourceTree = "<group>"; };
 		0DECCB1E1BAEF21000C7A937 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		0DECCB211BAEF50500C7A937 /* RecordRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordRepository.swift; sourceTree = "<group>"; };
@@ -133,8 +131,7 @@
 		0DA4DC981BA458B4009F2118 = {
 			isa = PBXGroup;
 			children = (
-				0DCE5FDF1BB634D80084D3C0 /* .travis.yml */,
-				0DCE5FDD1BB634120084D3C0 /* Makefile */,
+				0DCE5FE11BB69F0D0084D3C0 /* .travis.yml */,
 				75D2D703AF9772BA8F0A9C5B /* Frameworks */,
 				28F02473A313FF4C1966947A /* Pods */,
 				0DA4DCA21BA458B4009F2118 /* Products */,
@@ -316,7 +313,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DCE5FE01BB634D80084D3C0 /* .travis.yml in Resources */,
+				0DCE5FE21BB69F0D0084D3C0 /* .travis.yml in Resources */,
 				0DECCB1F1BAEF21000C7A937 /* Podfile in Resources */,
 				0D86676E1BA5A9F900C2C13A /* .gitignore in Resources */,
 				0DA4DCAC1BA458B4009F2118 /* Main.storyboard in Resources */,
@@ -400,7 +397,6 @@
 				0D8A31001BAAFD18005F7E6C /* Record.swift in Sources */,
 				0D62F8E31BB4316A00E507F6 /* LabelText.swift in Sources */,
 				0D8A31021BAB0053005F7E6C /* Date.swift in Sources */,
-				0DCE5FDE1BB634130084D3C0 /* Makefile in Sources */,
 				0DA4DCA71BA458B4009F2118 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
