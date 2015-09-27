@@ -21,7 +21,6 @@
 		0D86676B1BA57AA200C2C13A /* StopWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D86676A1BA57AA200C2C13A /* StopWatch.swift */; };
 		0D86676E1BA5A9F900C2C13A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 0D86676D1BA5A9F900C2C13A /* .gitignore */; };
 		0D86676F1BA5A9F900C2C13A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 0D86676D1BA5A9F900C2C13A /* .gitignore */; };
-		0D8667711BA5AEC700C2C13A /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 0D8667701BA5AEC700C2C13A /* README.md */; };
 		0D8A31001BAAFD18005F7E6C /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8A30FF1BAAFD18005F7E6C /* Record.swift */; };
 		0D8A31021BAB0053005F7E6C /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8A31011BAB0053005F7E6C /* Date.swift */; };
 		0D9E32911BA6F372006A432D /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9E32901BA6F372006A432D /* Timer.swift */; };
@@ -34,6 +33,7 @@
 		0DAB79991BB0579A0066632F /* CollectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAB79981BB0579A0066632F /* CollectionProtocol.swift */; settings = {ASSET_TAGS = (); }; };
 		0DAD082E1BA9A2F800847156 /* SubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAD082D1BA9A2F800847156 /* SubViewController.swift */; };
 		0DCE5FE21BB69F0D0084D3C0 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 0DCE5FE11BB69F0D0084D3C0 /* .travis.yml */; settings = {ASSET_TAGS = (); }; };
+		0DCE5FE41BB6F4A20084D3C0 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0D8667701BA5AEC700C2C13A /* README.md */; };
 		0DECCB1D1BAEB57600C7A937 /* UIColor+rgbHex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DECCB1C1BAEB57600C7A937 /* UIColor+rgbHex.swift */; settings = {ASSET_TAGS = (); }; };
 		0DECCB1F1BAEF21000C7A937 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 0DECCB1E1BAEF21000C7A937 /* Podfile */; settings = {ASSET_TAGS = (); }; };
 		0DECCB221BAEF50500C7A937 /* RecordRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DECCB211BAEF50500C7A937 /* RecordRepository.swift */; settings = {ASSET_TAGS = (); }; };
@@ -313,6 +313,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DCE5FE41BB6F4A20084D3C0 /* README.md in Resources */,
 				0DCE5FE21BB69F0D0084D3C0 /* .travis.yml in Resources */,
 				0DECCB1F1BAEF21000C7A937 /* Podfile in Resources */,
 				0D86676E1BA5A9F900C2C13A /* .gitignore in Resources */,
@@ -391,7 +392,6 @@
 				0DAB79971BB052F00066632F /* Collection.swift in Sources */,
 				0DAD082E1BA9A2F800847156 /* SubViewController.swift in Sources */,
 				0DAB79991BB0579A0066632F /* CollectionProtocol.swift in Sources */,
-				0D8667711BA5AEC700C2C13A /* README.md in Sources */,
 				0D9E32911BA6F372006A432D /* Timer.swift in Sources */,
 				0D86676B1BA57AA200C2C13A /* StopWatch.swift in Sources */,
 				0D8A31001BAAFD18005F7E6C /* Record.swift in Sources */,
@@ -560,10 +560,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -580,10 +577,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				INFOPLIST_FILE = "StopWatchTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "StopWatch.$(PRODUCT_NAME:rfc1034identifier)";
